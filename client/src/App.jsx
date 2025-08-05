@@ -12,7 +12,24 @@ import ProtectedRoute from './components/Auth/ProtectedRoute'
 import LoadingSpinner from './components/UI/LoadingSpinner'
 import LandingPage from './pages/LandingPage';
 import LandProcessesPage from './pages/Services/LandProcessesPage';
+import { useEffect } from 'react';
+import LandRegistry from './contracts/LandRegistry.json';
 
+function App() {
+  useEffect(() => {
+    const loadContract = async () => {
+      const contract = require('@truffle/contract');
+      const landContract = contract(LandRegistry);
+      landContract.setProvider(window.ethereum);
+      
+      const instance = await landContract.deployed();
+      console.log("Contract ready:", instance.address);
+    };
+    loadContract();
+  }, []);
+
+  return <div>Land Registry DApp</div>;
+}
 function App() {
   const { loading } = useSelector((state) => state.auth)
 
