@@ -2,7 +2,7 @@
   "name": "land",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@truffle/contract": "^4.6.31",
     "install": "^0.13.0",
     "lucide-react": "^0.525.0",
     "npm": "^11.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-hot-toast": "^2.5.2"
+    "react-hot-toast": "^2.5.2",
+    "truffle": "^5.11.5",
+    "web3": "^4.16.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
