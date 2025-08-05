@@ -2,12 +2,12 @@
   "name": "land",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "compile-contracts": "cd blockchain && truffle compile",
+    "deploy-contracts": "cd blockchain && truffle migrate"
   },
   "dependencies": {
     "@truffle/contract": "^4.6.31",
