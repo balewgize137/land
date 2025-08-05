@@ -1,5 +1,10 @@
-// blockchain/truffle-config.cjs
+const path = require('path');
+
 module.exports = {
+  contracts_build_directory: path.join(__dirname, "build"),
+  contracts_directory: path.join(__dirname, "contracts"), 
+  migrations_directory: path.join(__dirname, "migrations"),
+  
   networks: {
     development: {
       host: "127.0.0.1",
